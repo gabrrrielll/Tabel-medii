@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import AdaugaStudent from "./components/adaugaStudent";
+
 
 import "./index.css";
 
@@ -23,7 +23,7 @@ class Grupa extends React.Component {
         columnName: ""
       }
     };
-    //this.adaugaStudent = this.adaugaStudent.bind(this)
+   
   }
 
   componentDidMount() {
@@ -40,10 +40,7 @@ class Grupa extends React.Component {
   }
 
   adaugaStudent = e => {
-    //alert(key);
     e.preventDefault();
-    //console.log(e.target.nume.value);
-
     const students = [...this.state.students];
     var mesaj = [];
     if (e.target.nume.value == "") {
@@ -77,6 +74,7 @@ class Grupa extends React.Component {
     } else {
       var media = e.target.media.value;
     }
+
     students.push({
       nume: nume,
       prenume: prenume,
@@ -84,7 +82,7 @@ class Grupa extends React.Component {
       media: media,
       key: ID()
     });
-    //
+    
     if (mesaj[0]) {
       alert(mesaj[0]);
     } else {
@@ -93,7 +91,6 @@ class Grupa extends React.Component {
   };
 
   eliminaStudent = key => {
-    //alert(key);
     this.setState(prevState => {
       const students = prevState.students.filter(m => m.key !== key);
       return {
@@ -110,7 +107,7 @@ class Grupa extends React.Component {
       direction = 1;
       columnName = col;
     }
-    //console.log(col);
+ 
     if (col == "nume") {
       var student =
         direction === 1
@@ -144,7 +141,7 @@ class Grupa extends React.Component {
           : this.state.students.sort((a, b) => (a.media < b.media ? 1 : -1));
     }
 
-    // console.log(x);
+
     this.setState({ students: student, sortData: { direction, columnName } });
   };
   render() {
