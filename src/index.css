@@ -1,0 +1,71 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  margin-top: 100px;
+  text-align: center;
+  padding: 0;
+}
+table {
+  width: 412px;
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 2px solid black;
+}
+tr,
+td,
+th {
+  background-color: yellow;
+  border: 2px solid black;
+}
+form {
+  background-color: gold;
+  width: 408px;
+  margin: auto;
+  border: 2px solid black;
+  border-top: none;
+  padding: 4px 0;
+}
+input {
+  width: 11%;
+  border-radius: 2px;
+  margin: 2px;
+  padding: 1px 3px;
+  float: left;
+}
+thead th {
+  cursor: pointer;
+  color: white;
+}
+button {
+  padding: 5px 15px;
+  color: white;
+  background: red;
+}
+#submit {
+  margin: 4px;
+  width: 150px;
+  background: green;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px grey;
+}
+td,
+th {
+  padding: 5px;
+  border: 1px solid grey;
+}
+th {
+  background: orange;
+}
+thead tr th:nth-child(1),
+thead tr th:nth-child(2) {
+  width: 40%;
+}
+input:nth-child(1),
+input:nth-child(2) {
+  width: 25.8%;
+}
